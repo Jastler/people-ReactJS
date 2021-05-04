@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/components/PeopleList/_card.scss"],"names":[],"mappings":"AACE,YACE,SAAU","file":"main.48785dc7.chunk.css","sourcesContent":[".card {\n  &__name {\n    color: red;\n  }\n}\n"]}
