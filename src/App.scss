@@ -1,3 +1,29 @@
 @import "../node_modules/reset-css-complete/reset.css";
 
-@import "./components/PeopleList/PeopleList.scss"
+@import "./components/PeopleList/PeopleList.scss";
+@import "./components/CommentForm/CommentForm.scss";
+
+.App {
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    font-size: 22px;
+  }
+
+  &__load {
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(150, 44, 44);
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

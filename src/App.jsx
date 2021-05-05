@@ -36,12 +36,13 @@ export const App = () => {
 
   return (
     <div className="App">
-      <h1>Star wars:</h1>
+      <h1 className="App__title">Star wars:</h1>
       {people.length ? (
         <>
           <PeopleList people={people} />
           {loadMore && (
           <button
+            className="App__load"
             type="button"
             onClick={() => {
               setPage((prevState) => prevState + 1);

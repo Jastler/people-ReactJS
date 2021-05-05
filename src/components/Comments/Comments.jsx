@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Comments = ({ commentsWithId, deleteComment }) => (
-  <>
-    <h2>Comment</h2>
+  <div className="card__comments comments">
+    <h2 className="comments__title">Comments</h2>
     {commentsWithId && commentsWithId.map((comment) => (
-      <React.Fragment key={comment.id}>
-        <p>
+      <div
+        className="comments__body"
+        key={comment.id}
+      >
+        <p className="comments__text">
           {comment.text}
         </p>
         <button
+          className="comments__button"
           type="button"
           onClick={() => {
             deleteComment(comment.id);
@@ -17,9 +21,9 @@ export const Comments = ({ commentsWithId, deleteComment }) => (
         >
           Delete
         </button>
-      </React.Fragment>
+      </div>
     ))}
-  </>
+  </div>
 );
 
 Comments.propTypes = {

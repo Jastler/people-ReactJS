@@ -4,7 +4,6 @@ import { CommentForm } from '../CommentForm';
 
 export const PeopleList = ({ people }) => (
   <div className="people-list">
-    <p>people list</p>
     <div className="people-list__cards">
       {people.map((person) => (
         <div
@@ -14,7 +13,9 @@ export const PeopleList = ({ people }) => (
           <h2 className="card__name">
             {person.name}
           </h2>
-          <p>{person.birth_year}</p>
+          <p className="card__birth">
+            {person.birth_year}
+          </p>
           <CommentForm />
         </div>
       ))}

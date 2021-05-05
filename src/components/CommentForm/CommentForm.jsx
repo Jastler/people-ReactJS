@@ -27,11 +27,13 @@ export const CommentForm = () => {
   };
 
   return (
-    <div className="comment">
+    <div className="card__comment-form comment-form">
       <form
+        className="comment-form__form"
         onSubmit={handlerSubmit}
       >
         <textarea
+          className="comment-form__textarea"
           name="commentText"
           value={commentText}
           onChange={(event) => {
@@ -39,15 +41,16 @@ export const CommentForm = () => {
           }}
         />
         <button
+          className="comment-form__button"
           type="submit"
         >
           Push Comment
         </button>
-        <Comments
-          commentsWithId={commentsWithId}
-          deleteComment={deleteComment}
-        />
       </form>
+      <Comments
+        commentsWithId={commentsWithId}
+        deleteComment={deleteComment}
+      />
     </div>
   );
 };
